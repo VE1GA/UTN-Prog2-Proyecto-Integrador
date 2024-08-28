@@ -13,14 +13,14 @@ body {
   background-color: #f4f4f4;
   list-style-type: none;
   background-color: black;
-  font-size: 19px;
-  padding: 30px;
+  font-size: 23px;
+  padding: 20px;
   margin: 0;
 }
 
 .logo {
   max-width: 100%;
-  width: 60px;
+  width: 80px;
 }
 .navbar li a {
   text-decoration: none;
@@ -28,3 +28,64 @@ body {
   color: #f4f4f4;
   text-transform: uppercase;
 }
+
+.navbar li i{
+  font-size: 30px;
+}
+
+/*FORM*/
+
+main{
+  display: flex;
+  justify-content: center;
+}
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 700px;
+  padding: 18px;
+  background: linear-gradient(160deg, transparent 0%,#020202, #db3030) border-box;
+  border: 2px none transparent;
+  border-radius: 10px;
+}
+
+.form label{
+  font-size: 20px;
+}
+
+.form input{
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 7px;
+}
+
+.form-input{
+  width: 400px;
+}
+
+.input-form-submit {
+ width: 150px; 
+ background-color: #ff4655;
+ color: #ffffff;
+ padding: 10px 10px;
+ font-weight: bold;
+ cursor: pointer;
+ border: solid 3px rgba(0, 0, 0, 0.822);
+ transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.input-form-submit:hover{
+  background-color: #d93d45;
+  transform: scale(1.05);
+}
+
+textarea{
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 7px;
+}
+
+/*FIN FORM*/
