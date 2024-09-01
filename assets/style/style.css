@@ -49,6 +49,8 @@ main{
   background: linear-gradient(160deg, transparent 0%,#020202, #db3030) border-box;
   border: 2px none transparent;
   border-radius: 10px;
+  box-shadow: #bfb8b8 0px 0px 10px 2px;
+  margin-bottom: 20px;
 }
 
 .form label{
