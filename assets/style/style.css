@@ -183,6 +183,7 @@ textarea {
   transform: scale(1.05);
   background: linear-gradient(145deg, #2c2c2c, #ff4655);
   border: none;
+  padding: 17px;
 }
 
 .img-card{
