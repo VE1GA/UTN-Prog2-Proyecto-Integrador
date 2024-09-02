@@ -69,7 +69,22 @@ h3 {
   text-align: center;
   font-size: 30px;
   letter-spacing: 1.5px;
+  position: absolute;
 }
+
+h1{
+  position: absolute;
+  margin: 5px;
+}
+
+/*INICIO*/
+
+#banner{
+  display: flex;
+  width: 100%;
+}
+
+/*FIN INICIO*/
 
 /*FORM*/
 
