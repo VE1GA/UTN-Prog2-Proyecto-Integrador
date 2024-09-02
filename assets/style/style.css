@@ -3,7 +3,7 @@ body {
   padding: 0;
   font-family: "Courier New", Courier, monospace;
   background-color: rgb(26, 36, 46);
-  color: #f4f4f4;
+  color: white;
 }
 
 .navbar {
@@ -67,7 +67,7 @@ body {
 
 /*FORM*/
 
-main {
+.form-main {
   display: flex;
   justify-content: center;
 }
@@ -124,3 +124,53 @@ textarea {
 }
 
 /*FIN FORM*/
+
+/*CARD CONTAINER*/
+.card-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+/*FIN CARD-CONTAINER*/
+
+/*CARD*/
+
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: #020202 solid;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  margin: 15px
+}
+.card *{ /*Toma todos los elementos internos por separado*/
+  margin: 13px;
+}
+
+.titulo-card{
+  /* text-align: center; */
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.button-card{
+  padding: 15px;
+  text-transform: uppercase;
+  background: transparent;
+  border-radius: 5px;
+  border-color: #db3030;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.button-card:hover{
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+  transform: scale(1.05);
+  background: linear-gradient(145deg, #2c2c2c, #ff4655);
+  border: none;
+}
+/*FIN-CARD*/
