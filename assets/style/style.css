@@ -10,35 +10,68 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #f4f4f4;
   list-style-type: none;
   background-color: black;
   font-size: 23px;
   padding: 20px;
   margin: 0;
+  overflow: visible;
 }
 
 .logo {
   max-width: 100%;
-  width: 80px;
+  width: 90px;
 }
+
+.logo img{
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: box-shadow 0.5s ease-in-out;
+  background: transparent;
+  z-index: 1;
+  filter: none;
+}
+
+.logo img:hover {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Ajusta el tamaño y color de la sombra según sea necesario */
+}
+
 .navbar li a {
   text-decoration: none;
   font-weight: bolder;
   color: #f4f4f4;
   text-transform: uppercase;
+  padding: 10px;
 }
 
-.navbar li i{
+.navbar li:hover {
+  animation: scale-up-bottom 0.17s ease-in-out forwards; /* Añadir ease-in-out para suavizar la animación */
+}
+
+@keyframes scale-up-bottom {
+    0% {
+        transform: scale(1);
+        transform-origin: center bottom;
+    }
+    100% {
+        transform: scale(1.1);
+        transform-origin: center bottom;
+    }
+}
+
+
+.navbar li i {
   font-size: 30px;
 }
 
 /*FORM*/
 
-main{
+main {
   display: flex;
   justify-content: center;
 }
+
 .form {
   display: flex;
   align-items: center;
@@ -46,45 +79,45 @@ main{
   flex-direction: column;
   width: 700px;
   padding: 18px;
-  background: linear-gradient(160deg, transparent 0%,#020202, #db3030) border-box;
+  background: linear-gradient(160deg, transparent 0%, #020202, #db3030) border-box;
   border: 2px none transparent;
   border-radius: 10px;
   box-shadow: #bfb8b8 0px 0px 10px 2px;
   margin-bottom: 20px;
 }
 
-.form label{
+.form label {
   font-size: 20px;
 }
 
-.form input{
+.form input {
   margin-bottom: 20px;
   font-size: 20px;
   text-align: center;
   border-radius: 7px;
 }
 
-.form-input{
+.form-input {
   width: 400px;
 }
 
 .input-form-submit {
- width: 150px; 
- background-color: #ff4655;
- color: #ffffff;
- padding: 10px 10px;
- font-weight: bold;
- cursor: pointer;
- border: solid 3px rgba(0, 0, 0, 0.822);
- transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 150px;
+  background-color: #ff4655;
+  color: #ffffff;
+  padding: 10px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  border: solid 3px rgba(0, 0, 0, 0.822);
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.input-form-submit:hover{
+.input-form-submit:hover {
   background-color: #d93d45;
   transform: scale(1.05);
 }
 
-textarea{
+textarea {
   margin-bottom: 20px;
   border: none;
   border-radius: 7px;
