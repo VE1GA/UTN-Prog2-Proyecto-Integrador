@@ -71,16 +71,45 @@ h3 {
   letter-spacing: 1.5px;
 }
 
-h1{
+/* h1{
   position: absolute;
   margin: 5px;
-}
+} */
 
 /*INICIO*/
 
-#banner{
+.body-inicio{
+ background-image: url("/assets/img/inicio/banner2.jpg");
+ background-color: rgb(61, 61, 61);
+ background-blend-mode: soft-light;
+}
+
+.div-inicio{
   display: flex;
-  width: 100%;
+  height: 70vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.div-inicio a{
+  text-decoration: none;
+  color: white;
+  border: solid 1px;
+  padding: 10px;
+  border-radius: 10px;
+  /* border-color: #db3030; */
+  transition: transform 0.2s;
+}
+
+.div-inicio a:hover{
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+  transform: scale(1.05);
+  background: linear-gradient(145deg, #2c2c2c, #ff4655);
+  border: none;
+  /* padding: 17px; */
 }
 
 /*FIN INICIO*/
