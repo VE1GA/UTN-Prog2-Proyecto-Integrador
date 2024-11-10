@@ -1,4 +1,5 @@
 from typing import List, Dict, Union
+from . import db
 
 Producto = Dict[str, Union[str, float]] #"Producto => cada producto individual"
 
@@ -194,3 +195,16 @@ productos: List[Producto] = [ #"productos es la lista/array"
         "precio": 12.00
     }
 ]
+
+# def insertar_productos():
+#     for producto in productos:
+#         nuevo_producto = Producto(
+#             nombre=producto['nombre'],
+#             imagen=producto['imagen'],
+#             categoria=producto['categoria'],
+#             precio=producto['precio']
+#         )
+#         db.session.add(nuevo_producto)
+
+#     db.session.commit()
+
