@@ -1,4 +1,4 @@
-from flask import render_template, Blueprint, url_for
+from flask import render_template, Blueprint, url_for, jsonify
 from src.productos import productos
 
 productos_bp = Blueprint('productos_bp', __name__)
