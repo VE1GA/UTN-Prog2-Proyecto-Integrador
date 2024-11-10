@@ -19,12 +19,12 @@
     <nav>
       <ul class="navbar">
         <img src="{{ url_for('static', filename='assets/img/logo/Valorant-Logo-shadow.png') }}" alt="Imagen" class="logo">
-        <li><a href="{{ url_for('index') }}">Inicio</a></li>
-        <li><a href="{{ url_for('remeras') }}">Remeras</a></li>
-        <li><a href="{{ url_for('buzos') }}">Buzos</a></li>
-        <li><a href="{{ url_for('pantalones') }}">Pantalones</a></li>
-        <li><a href="{{ url_for('accesorios') }}">Accesorios</a></li>
-        <li><a href="{{ url_for('form') }}">Formulario</a></li>
+        <li><a href="{{ url_for('productos_bp.index') }}">Inicio</a></li>
+        <li><a href="{{ url_for('productos_bp.remeras') }}">Remeras</a></li>
+        <li><a href="{{ url_for('productos_bp.buzos') }}">Buzos</a></li>
+        <li><a href="{{ url_for('productos_bp.pantalones') }}">Pantalones</a></li>
+        <li><a href="{{ url_for('productos_bp.accesorios') }}">Accesorios</a></li>
+        <li><a href="{{ url_for('productos_bp.form') }}">Formulario</a></li>
         <li><i class="fa fa-shopping-cart"></i></li>
     </ul>
     </nav>
@@ -57,7 +57,7 @@
   </main>
 
   <footer>
-    <img src="./assets/img/logo/Valorant-Logo-white.png" alt="logo-footer">
+    <img src="../static/assets/img/logo/Valorant-Logo-white.png" alt="logo-footer">
     <p>© Valorant Clothes 2024. All rights reserved.</p>
     <div class="redes-sociales">
       <a href="https://www.youtube.com/@valorant" target="_blank"><i class="fa fa-youtube-play"></i></a>
