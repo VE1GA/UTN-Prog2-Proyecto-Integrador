@@ -79,7 +79,7 @@ h3 {
 /*INICIO*/
 
 .body-inicio {
- background-image: url("/assets/img/inicio/banner2.jpg");
+ background-image: url("../img/inicio/banner2.jpg");
  background-color: rgb(61, 61, 61);
  background-blend-mode: soft-light;
 }

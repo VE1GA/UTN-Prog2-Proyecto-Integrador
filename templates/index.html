@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <link rel="stylesheet" href="{{ url_for('static', filename='assets/style/style.css') }}"> -->
+  <link rel="stylesheet" href="/static/assets/style/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="icon" href="../static/assets/img/logo/Valorant-Logo-shadow.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
+  <title>Valorant Clothes</title>
+</head>
+
+<body class="body-inicio">
+  <header>
+    <nav>
+      <ul class="navbar">
+        <img src="{{ url_for('static', filename='assets/img/logo/Valorant-Logo-shadow.png') }}" alt="Imagen" class="logo">
+        <li><a href="{{ url_for('index') }}">Inicio</a></li>
+        <li><a href="{{ url_for('remeras') }}">Remeras</a></li>
+        <li><a href="{{ url_for('buzos') }}">Buzos</a></li>
+        <li><a href="{{ url_for('pantalones') }}">Pantalones</a></li>
+        <li><a href="{{ url_for('accesorios') }}">Accesorios</a></li>
+        <li><a href="{{ url_for('form') }}">Formulario</a></li>
+        <li><i class="fa fa-shopping-cart"></i></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="div-inicio">
+      <h1>Welcome to Valorant Clothes</h1>
+      <a href="{{ url_for('remeras') }}">Comenzar</a>
+    </div>
+  </main>
+</body>
+
+</html>
+
+<!-- <link rel="stylesheet" href="{{ url_for('static', filename='style/your_style.css') }}">
+<script src="{{ url_for('static', filename='assets/scripts/your_script.js') }}"></script>
+<img src="{{ url_for('static', filename='assets/img/your_image.png') }}" alt="Image description"> -->
+

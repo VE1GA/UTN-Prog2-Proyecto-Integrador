@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./assets/style/style.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/style/style.css') }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="icon" href="./assets/img/logo/Valorant-Logo-shadow.png">
   <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
+  <link rel="icon" href="./assets/img/logo/Valorant-Logo-shadow.png">
   <title>Valorant Clothes</title>
 </head>
 
@@ -17,66 +17,66 @@
   <header>
     <nav>
       <ul class="navbar">
-        <img src="./assets/img/logo/Valorant-Logo-shadow.png" alt="Valorant logo" class="logo">
-        <li><a href="./inicio.html">Inicio</a></li>
-        <li><a href="./remeras.html">Remeras</a></li>
-        <li><a href="./buzos.html">Buzos</a></li>
-        <li><a href="./pantalones.html">Pantalones</a></li>
-        <li><a href="./accesorios.html">Accesorios</a></li>
-        <li><a href="./form.html">Formulario</a></li>
+        <img src="{{ url_for('static', filename='assets/img/logo/Valorant-Logo-shadow.png') }}" alt="Imagen" class="logo">
+        <li><a href="{{ url_for('index') }}">Inicio</a></li>
+        <li><a href="{{ url_for('remeras') }}">Remeras</a></li>
+        <li><a href="{{ url_for('buzos') }}">Buzos</a></li>
+        <li><a href="{{ url_for('pantalones') }}">Pantalones</a></li>
+        <li><a href="{{ url_for('accesorios') }}">Accesorios</a></li>
+        <li><a href="{{ url_for('form') }}">Formulario</a></li>
         <li><i class="fa fa-shopping-cart"></i></li>
-      </ul>
+    </ul>
     </nav>
   </header>
 
   <main>
-    <h3>PANTALONES</h3>
+    <h3>BUZOS</h3>
     <div class="card-container">
       <div class="card">
-        <h3 class="titulo-card">Deportivo negro liso</h3>
-        <img src="./assets/img/pantalones/deportivo-negro-liso.jpg" alt="Deportivo negro liso" class="img-card">
+        <h3 class="titulo-card">Buzo valorant negro</h3>
+        <img src="./assets/img/buzos/buzo-valorant-negro.jpg" alt="Buzo valorant negro" class="img-card">
         <button class="button-card">Agregar al carrito</button>
       </div>
 
       <div class="card">
-        <h3 class="titulo-card">Jogger negro liso</h3>
-        <img src="./assets/img/pantalones/jogger-negro-liso.jpg" alt="Jogger negro liso" class="img-card">
+        <h3 class="titulo-card">Buzo valorant blanco</h3>
+        <img src="/assets/img/buzos/Buzo-valorant-blanco.jpg" alt="Buzo valorant blanco" class="img-card">
         <button class="button-card">Agregar al carrito</button>
       </div>
 
       <div class="card">
-        <h3 class="titulo-card">Pantalon jett y phoenix</h3>
-        <img src="/assets/img/pantalones/pantalon-jett&phoenix.jpg" alt="Pantalon jett y phoenix" class="img-card">
+        <h3 class="titulo-card">Buzo yoru negro</h3>
+        <img src="/assets/img/buzos/Buzo-yoru.jpg" alt="Buzo yoru negro" class="img-card">
         <button class="button-card">Agregar al carrito</button>
       </div>
 
       <div class="card">
-        <h3 class="titulo-card">Pantalon Jett rojo</h3>
-        <img src="/assets/img/pantalones/pantalon-jett-rojo.jpg" alt="Pantalon jett rojo" class="img-card">
+        <h3 class="titulo-card">Buzo crema logo</h3>
+        <img src="/assets/img/buzos/Buzo beige liso.jpg" alt="Buzo crema logo" class="img-card">
         <button class="button-card">Agregar al carrito</button>
       </div>
 
       <div class="card">
-        <h3 class="titulo-card">Pantalon Killjoy</h3>
-        <img src="/assets/img/pantalones/pantalon-killjoy.jpg" alt="Pantalon Killjoy" class="img-card">
+        <h3 class="titulo-card">Buzo valorant sage</h3>
+        <img src="/assets/img/buzos/Buzo sage.jpg" alt="Buzo sage" class="img-card">
         <button class="button-card">Agregar al carrito</button>
       </div>
 
       <div class="card">
-        <h3 class="titulo-card">Pantalon all Characters</h3>
-        <img src="/assets/img/pantalones/pantalon-re-loco.jpg" alt="Pantalon all Characters" class="img-card">
+        <h3 class="titulo-card">Buzo valorant master</h3>
+        <img src="/assets/img/buzos/Buzo-valorant-master.jpg" alt="Buzo valorant master" class="img-card">
         <button class="button-card">Agregar al carrito</button>
       </div>
 
       <div class="card">
-        <h3 class="titulo-card">Pantalon Sage</h3>
-        <img src="/assets/img/pantalones/pantalon-sage.jpg" alt="Pantalon Sage" class="img-card">
+        <h3 class="titulo-card">Buzo valorant logo negro</h3>
+        <img src="/assets/img/buzos/buzo-logo-negro.jpg" alt="Buzo valorant logo negro" class="img-card">
         <button class="button-card">Agregar al carrito</button>
       </div>
 
       <div class="card">
-        <h3 class="titulo-card">Pantalon Sova</h3>
-        <img src="/assets/img/pantalones/pantalon-sova.jpg" alt="Pantalon Sova" class="img-card">
+        <h3 class="titulo-card">Buzo valorant rojo</h3>
+        <img src="./assets/img/buzos/Buzo rojo liso.jpg" alt="Buzo rojo liso" class="img-card">
         <button class="button-card">Agregar al carrito</button>
       </div>
 
