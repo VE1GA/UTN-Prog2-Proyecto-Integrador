@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="icon" href="./static/assets/img/logo/Valorant-Logo-shadow.png">
+  <link rel="icon" href="{{ url_for('static', filename='assets/img/logo/Valorant-Logo-shadow.png') }}">
   <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
   <script src="{{ url_for('static', filename='assets/js/info-carrito.js') }}"></script>
   <title>Valorant Clothes</title>
@@ -38,7 +38,7 @@
         <h3 class="titulo-card">{{ producto.nombre }}</h3>
         <img src="{{ url_for('static', filename='assets/img/pantalones/' ~ producto['imagen']) }}" alt="{{ producto['nombre'] }}" class="img-card">
 
-        <button class="button-card" onclick="agregar_al_carrito('{{ producto.id }}')">Agregar al carrito</button>
+        <button class="button-card" onclick="agregar_al_carrito('{{ producto.id }}', '{{ producto.nombre }}', '{{ producto.imagen }}', '{{ producto.precio }}')">Agregar al carrito</button>
       </div>
       {% endfor %}
 

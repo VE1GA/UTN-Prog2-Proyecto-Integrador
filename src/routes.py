@@ -1,4 +1,4 @@
-from flask import render_template, Blueprint
+from flask import render_template, Blueprint, session, request, jsonify
 from src.models import Producto
 
 productos_bp = Blueprint('productos_bp', __name__)
@@ -28,11 +28,26 @@ def accesorios():
     accesorios = Producto.query.filter_by(categoria='Accesorios').all()
     return render_template('accesorios.html', productos=accesorios)
 
-@productos_bp.route('/carrito')
-def carrito():
-    carrito = []
-    return render_template('carrito.html')
+# @productos_bp.route('/carrito')
+# def carrito():
+#     carrito = []
+#     return render_template('carrito.html')
 
 @productos_bp.route('/form')
 def form():
     return render_template('form.html')
+
+
+@productos_bp.route('/agregar_carrito', methods=['POST'])
+def agregar_carrito(): 
+        carrito_actual = session.get('carrito', []) #Trae la info de carritos si es que tiene
+        datos_carrito = request.get_json() #Va agarrando los productos que se van agregando
+        carrito_actual.extend(datos_carrito)
+        session['carrito'] = carrito_actual #Actualiza constantemente la Lista 
+        return jsonify({'status': 'success'})
+    
+
+@productos_bp.route('/carrito') 
+def carrito(): 
+    carrito = session.get('carrito', []) 
+    return render_template('carrito.html', carrito=carrito)

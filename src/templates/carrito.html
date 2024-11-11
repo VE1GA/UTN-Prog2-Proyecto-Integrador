@@ -29,13 +29,24 @@
         </nav>
       </header>
 
-      {% for producto in productos %}
+      <!-- {% for producto in productos %}
       <div class="card" id="producto['id']">
         <h3>{{ producto.nombre }}</h3>
         <img src="{{ url_for('static', filename='assets/img/buzos/' ~ producto['imagen']) }}" alt="">
       </div>
-      {% endfor %}
+      {% endfor %} -->
 
-      
+      <h3>CARRITO DE COMPRAS</h3> 
+      <div class="card-container">  
+        <ul>
+          {% for producto in carrito %}
+          <div class="card">
+            <li>Producto ID: {{ producto.id }}</li>
+            <h3>{{ producto.nombre }}</h3>
+            <img src="{{ url_for('static', filename='assets/img/' ~ producto.imagen) }}" alt="{{ producto.nombre }}">
+            <p>Precio: {{ producto.precio }}</p>
+          </div>
+          {% endfor %}
+      </ul>
 </body>
 </html>

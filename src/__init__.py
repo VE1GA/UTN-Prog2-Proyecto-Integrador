@@ -8,6 +8,7 @@ migrate : Migrate = Migrate()
 
 def create_app() -> Flask:
     app = Flask(__name__)
+    app.secret_key = '12345'
     app.config.from_object(obj=Config)
 
     db.init_app(app=app)
