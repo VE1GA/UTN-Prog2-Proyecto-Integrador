@@ -17,7 +17,7 @@ form.addEventListener('submit', (event) => {
     event.preventDefault();
 
     const regexNombre = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
-    const telefonoRegex = /^\d{1,12}$/;
+    const telefonoRegex = /^\d{9,11}$/;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$/;
 
     const today = new Date();
