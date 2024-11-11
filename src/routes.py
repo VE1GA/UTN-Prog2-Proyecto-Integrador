@@ -51,3 +51,17 @@ def agregar_carrito():
 def carrito(): 
     carrito = session.get('carrito', []) 
     return render_template('carrito.html', carrito=carrito)
+
+@productos_bp.route('/eliminar_carrito', methods=['POST'])
+def eliminar_carrito():
+
+    data = request.get_json()
+    productoid = data.get('id')
+
+    carrito_actual = session.get('carrito', [])
+
+    carrito_actual = [producto for producto in carrito_actual if producto['id'] != productoid]
+
+    session['carrito'] = carrito_actual
+
+    return jsonify({'status': 'success'})
