@@ -40,7 +40,8 @@ form.addEventListener('submit', (event) => {
                     
                     const inputDate = new Date(inputNacForm.value);
                     if (inputDate <= minDate) {
-                        console.log("Fecha de nacimiento válida");
+                        window.alert("Formulario cargado correctamente");
+                        form.reset();
 
                     } else {
                         window.alert("Tienes que ser mayor a 13 años");
