@@ -24,7 +24,7 @@
         <li><a href="{{ url_for('productos_bp.pantalones') }}">Pantalones</a></li>
         <li><a href="{{ url_for('productos_bp.accesorios') }}">Accesorios</a></li>
         <li><a href="{{ url_for('productos_bp.form') }}">Formulario</a></li>
-        <li><i class="fa fa-shopping-cart"></i></li>
+        <li><a href="{{ url_for('productos_bp.carrito' )}}"><i class="fa fa-shopping-cart"></i></a></li>
     </ul>
     </nav>
   </header>
@@ -33,55 +33,13 @@
     <h3>BUZOS</h3>
     <div class="card-container">
       {% for producto in productos %}
-      <div class="card">
+      <div class="card" id="producto['id']">
         <h3 class="titulo-card">{{ producto.nombre }}</h3>
         <img src="{{ url_for('static', filename='assets/img/buzos/' ~ producto['imagen']) }}" alt="{{ producto['nombre'] }}" class="img-card">
 
         <button class="button-card">Agregar al carrito</button>
       </div>
       {% endfor %}
-
-      <!-- <div class="card">
-        <h3 class="titulo-card">Buzo valorant blanco</h3>
-        <img src="/assets/img/buzos/Buzo-valorant-blanco.jpg" alt="Buzo valorant blanco" class="img-card">
-        <button class="button-card">Agregar al carrito</button>
-      </div>
-
-      <div class="card">
-        <h3 class="titulo-card">Buzo yoru negro</h3>
-        <img src="/assets/img/buzos/Buzo-yoru.jpg" alt="Buzo yoru negro" class="img-card">
-        <button class="button-card">Agregar al carrito</button>
-      </div>
-
-      <div class="card">
-        <h3 class="titulo-card">Buzo crema logo</h3>
-        <img src="/assets/img/buzos/Buzo beige liso.jpg" alt="Buzo crema logo" class="img-card">
-        <button class="button-card">Agregar al carrito</button>
-      </div>
-
-      <div class="card">
-        <h3 class="titulo-card">Buzo valorant sage</h3>
-        <img src="/assets/img/buzos/Buzo sage.jpg" alt="Buzo sage" class="img-card">
-        <button class="button-card">Agregar al carrito</button>
-      </div>
-
-      <div class="card">
-        <h3 class="titulo-card">Buzo valorant master</h3>
-        <img src="/assets/img/buzos/Buzo-valorant-master.jpg" alt="Buzo valorant master" class="img-card">
-        <button class="button-card">Agregar al carrito</button>
-      </div>
-
-      <div class="card">
-        <h3 class="titulo-card">Buzo valorant logo negro</h3>
-        <img src="/assets/img/buzos/buzo-logo-negro.jpg" alt="Buzo valorant logo negro" class="img-card">
-        <button class="button-card">Agregar al carrito</button>
-      </div>
-
-      <div class="card">
-        <h3 class="titulo-card">Buzo valorant rojo</h3>
-        <img src="./assets/img/buzos/Buzo rojo liso.jpg" alt="Buzo rojo liso" class="img-card">
-        <button class="button-card">Agregar al carrito</button>
-      </div> -->
 
     </div>
   </main>

@@ -24,7 +24,7 @@
         <li><a href="{{ url_for('productos_bp.pantalones') }}">Pantalones</a></li>
         <li><a href="{{ url_for('productos_bp.accesorios') }}">Accesorios</a></li>
         <li><a href="{{ url_for('productos_bp.form') }}">Formulario</a></li>
-        <li><i class="fa fa-shopping-cart"></i></li>
+        <li><a href="{{ url_for('productos_bp.carrito' )}}"><i class="fa fa-shopping-cart"></i></a></li>
     </ul>
     </nav>
   </header>
@@ -39,7 +39,4 @@
 
 </html>
 
-<!-- <link rel="stylesheet" href="{{ url_for('static', filename='style/your_style.css') }}">
-<script src="{{ url_for('static', filename='assets/scripts/your_script.js') }}"></script>
-<img src="{{ url_for('static', filename='assets/img/your_image.png') }}" alt="Image description"> -->
 

@@ -24,7 +24,7 @@
         <li><a href="{{ url_for('productos_bp.pantalones') }}">Pantalones</a></li>
         <li><a href="{{ url_for('productos_bp.accesorios') }}">Accesorios</a></li>
         <li><a href="{{ url_for('productos_bp.form') }}">Formulario</a></li>
-        <li><i class="fa fa-shopping-cart"></i></li>
+        <li><a href="{{ url_for('productos_bp.carrito' )}}"><i class="fa fa-shopping-cart"></i></a></li>
     </ul>
     </nav>
   </header>
@@ -33,55 +33,13 @@
     <h3>PANTALONES</h3>
     <div class="card-container">
       {% for producto in productos %}
-      <div class="card">
+      <div class="card" id="producto['id']">
         <h3 class="titulo-card">{{ producto.nombre }}</h3>
         <img src="{{ url_for('static', filename='assets/img/pantalones/' ~ producto['imagen']) }}" alt="{{ producto['nombre'] }}" class="img-card">
 
         <button class="button-card">Agregar al carrito</button>
       </div>
       {% endfor %}
-
-      <!-- <div class="card">
-        <h3 class="titulo-card">Jogger negro liso</h3>
-        <img src="./assets/img/pantalones/jogger-negro-liso.jpg" alt="Jogger negro liso" class="img-card">
-        <button class="button-card">Agregar al carrito</button>
-      </div>
-
-      <div class="card">
-        <h3 class="titulo-card">Pantalon jett y phoenix</h3>
-        <img src="/assets/img/pantalones/pantalon-jett&phoenix.jpg" alt="Pantalon jett y phoenix" class="img-card">
-        <button class="button-card">Agregar al carrito</button>
-      </div>
-
-      <div class="card">
-        <h3 class="titulo-card">Pantalon Jett rojo</h3>
-        <img src="/assets/img/pantalones/pantalon-jett-rojo.jpg" alt="Pantalon jett rojo" class="img-card">
-        <button class="button-card">Agregar al carrito</button>
-      </div>
-
-      <div class="card">
-        <h3 class="titulo-card">Pantalon Killjoy</h3>
-        <img src="/assets/img/pantalones/pantalon-killjoy.jpg" alt="Pantalon Killjoy" class="img-card">
-        <button class="button-card">Agregar al carrito</button>
-      </div>
-
-      <div class="card">
-        <h3 class="titulo-card">Pantalon all Characters</h3>
-        <img src="/assets/img/pantalones/pantalon-re-loco.jpg" alt="Pantalon all Characters" class="img-card">
-        <button class="button-card">Agregar al carrito</button>
-      </div>
-
-      <div class="card">
-        <h3 class="titulo-card">Pantalon Sage</h3>
-        <img src="/assets/img/pantalones/pantalon-sage.jpg" alt="Pantalon Sage" class="img-card">
-        <button class="button-card">Agregar al carrito</button>
-      </div>
-
-      <div class="card">
-        <h3 class="titulo-card">Pantalon Sova</h3>
-        <img src="/assets/img/pantalones/pantalon-sova.jpg" alt="Pantalon Sova" class="img-card">
-        <button class="button-card">Agregar al carrito</button>
-      </div> -->
 
     </div>
   </main>

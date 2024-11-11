@@ -1,5 +1,5 @@
-from flask import render_template, Blueprint, url_for, jsonify
-from src.productos import productos
+from flask import render_template, Blueprint
+from src.models import Producto
 
 productos_bp = Blueprint('productos_bp', __name__)
 
@@ -10,23 +10,28 @@ def index() -> str:
 
 @productos_bp.route('/remeras')
 def remeras():
-    remeras = [producto for producto in productos if producto['categoria'] == 'Remeras']
-    return render_template('remeras.html', productos=remeras)
+    remeras = Producto.query.filter_by(categoria='Remeras').all()
+    return render_template('remeras.html', productos=remeras)    
 
 @productos_bp.route('/buzos')
 def buzos():
-    buzos = [producto for producto in productos if producto['categoria'] == 'Buzos']
+    buzos = Producto.query.filter_by(categoria='Buzos').all()
     return render_template('buzos.html', productos=buzos)
 
 @productos_bp.route('/pantalones')
 def pantalones():
-    pantalones = [producto for producto in productos if producto['categoria'] == 'Pantalones']
+    pantalones = Producto.query.filter_by(categoria='Pantalones').all()
     return render_template('pantalones.html', productos=pantalones)
 
 @productos_bp.route('/accesorios')
 def accesorios():
-    accesorios = [producto for producto in productos if producto['categoria'] == 'Accesorios']
+    accesorios = Producto.query.filter_by(categoria='Accesorios').all()
     return render_template('accesorios.html', productos=accesorios)
+
+@productos_bp.route('/carrito')
+def carrito():
+    carrito = []
+    return render_template('carrito.html')
 
 @productos_bp.route('/form')
 def form():
