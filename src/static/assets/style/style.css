@@ -150,6 +150,10 @@ h3 {
   width: 400px;
 }
 
+.form-body{
+  background-image: url("../img/banner3.jpeg");
+}
+
 .input-form-submit {
   width: 150px;
   background-color: #ff4655;
@@ -198,6 +202,32 @@ textarea {
 }
 
 .card * { /*Toma todos los elementos internos por separado*/
+  margin: 13px;
+}
+
+.card-carrito{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: #020202 solid;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  margin: 15px;
+  width: 57%;
+  height: 150px;
+  justify-content: space-around;
+}
+
+.card-carrito img{
+  width: 70px;
+}
+
+.card-carrito h3 {
+  font-size: 20px;
+}
+
+.card-carrito * { /*Toma todos los elementos internos por separado*/
   margin: 13px;
 }
 

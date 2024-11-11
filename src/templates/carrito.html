@@ -38,16 +38,14 @@
 
       <h3>CARRITO DE COMPRAS</h3> 
       <div class="card-container">  
-        <ul>
           {% for producto in carrito %}
-          <div class="card">
+          <div class="card-carrito">
             <li>Producto ID: {{ producto.id }}</li>
             <h3>{{ producto.nombre }}</h3>
             <img src="{{ url_for('static', filename='assets/img/' ~ producto.imagen) }}" alt="{{ producto.nombre }}">
             <p>Precio: {{ producto.precio }}</p>
-            <button onclick="eliminar_del_carrito('{{ producto.id }}')" class="button-card">Eliminar del carrito</button>
+            <button onclick="eliminar_del_carrito('{{ producto.id }}')" class="button-card" onclick="window.location.reload();">Eliminar del carrito</button>
           </div>
           {% endfor %}
-      </ul>
 </body>
 </html>
