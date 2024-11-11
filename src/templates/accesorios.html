@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
   <link rel="icon" href="./assets/img/logo/Valorant-Logo-shadow.png">
+  <script src="{{ url_for('static', filename='assets/js/info-carrito.js') }}"></script>
   <title>Valorant Clothes</title>
 </head>
 
@@ -33,11 +34,11 @@
     <h3>ACCESORIOS</h3>
     <div class="card-container">
       {% for producto in productos %}
-      <div class="card" id="{{producto['id']}}">
+      <div class="card" id="{{ producto.id }}">
         <h3 class="titulo-card">{{ producto.nombre }}</h3>
         <img src="{{ url_for('static', filename='assets/img/accesorios/' ~ producto['imagen']) }}" alt="{{ producto['nombre'] }}" class="img-card">
 
-        <button class="button-card">Agregar al carrito</button>
+        <button class="button-card" onclick="agregar_al_carrito('{{ producto.id }}')">Agregar al carrito</button>
       </div>
       {% endfor %}
 
@@ -54,7 +55,7 @@
       <a href="https://www.twitch.tv/valorant" target="_blank"><i class="fa fa-twitch"></i></a>
     </div>
   </footer>
-
+  
 </body>
 
 </html>
