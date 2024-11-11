@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/style/style.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
+  <link rel="icon" href="{{ url_for('static', filename='assets/img/logo/Valorant-Logo-shadow.png') }}">
+  <script src="{{ url_for('static', filename='assets/js/info-carrito.js') }}"></script>
+  <title>Valorant Clothes</title>
+  
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul class="navbar">
+        <img src="{{ url_for('static', filename='assets/img/logo/Valorant-Logo-shadow.png') }}" alt="Imagen" class="logo">
+        <li><a href="{{ url_for('productos_bp.index') }}">Inicio</a></li>
+        <li><a href="{{ url_for('productos_bp.remeras') }}">Remeras</a></li>
+        <li><a href="{{ url_for('productos_bp.buzos') }}">Buzos</a></li>
+        <li><a href="{{ url_for('productos_bp.pantalones') }}">Pantalones</a></li>
+        <li><a href="{{ url_for('productos_bp.accesorios') }}">Accesorios</a></li>
+        <li><a href="{{ url_for('productos_bp.form') }}">Formulario</a></li>
+        <li><a href="{{ url_for('productos_bp.carrito' )}}"><i class="fa fa-shopping-cart"></i></a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h3>BUZOS</h3>
+    <div class="card-container">
+      {% for producto in productos %}
+      <div class="card" id="{{ producto.id }}">
+        <h3 class="titulo-card">{{ producto.nombre }}</h3>
+        <img src="{{ url_for('static', filename='assets/img/buzos/' ~ producto['imagen']) }}" alt="{{ producto['nombre'] }}" class="img-card">
+
+        <button class="button-card" onclick="agregar_al_carrito('{{ producto.id }}', '{{ producto.nombre }}', '{{ producto.imagen }}', '{{ producto.precio }}')">Agregar al carrito</button>
+      </div>
+      {% endfor %}
+
+    </div>
+  </main>
+
+  <footer>
+    <img src="../static/assets/img/logo/Valorant-Logo-white.png" alt="logo-footer">
+    <p>© Valorant Clothes 2024. All rights reserved.</p>
+    <div class="redes-sociales">
+      <a href="https://www.youtube.com/@valorant" target="_blank"><i class="fa fa-youtube-play"></i></a>
+      <a href="https://www.instagram.com/valorant" target="_blank"><i class="fa fa-instagram"></i></a>
+      <a href="https://twitter.com/valorant" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://www.twitch.tv/valorant" target="_blank"><i class="fa fa-twitch"></i></a>
+    </div>
+  </footer>
+  
+</body>
+
+</html>

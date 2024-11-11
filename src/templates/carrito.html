@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/style/style.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="icon" href="{{ url_for('static', filename='assets/img/logo/Valorant-Logo-shadow.png') }}">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
+  <script src="{{ url_for('static', filename='assets/js/info-carrito.js') }}"></script>
+  <title>Valorant Clothes</title>
+  
+</head>
+<body class="body-inicio">
+    <header>
+        <nav>
+          <ul class="navbar">
+            <img src="{{ url_for('static', filename='assets/img/logo/Valorant-Logo-shadow.png') }}" alt="Logo" class="logo">
+            <li><a href="{{ url_for('productos_bp.index') }}">Inicio</a></li>
+            <li><a href="{{ url_for('productos_bp.remeras') }}">Remeras</a></li>
+            <li><a href="{{ url_for('productos_bp.buzos') }}">Buzos</a></li>
+            <li><a href="{{ url_for('productos_bp.pantalones') }}">Pantalones</a></li>
+            <li><a href="{{ url_for('productos_bp.accesorios') }}">Accesorios</a></li>
+            <li><a href="{{ url_for('productos_bp.form') }}">Formulario</a></li>
+            <li><a href="{{ url_for('productos_bp.carrito' )}}"><i class="fa fa-shopping-cart"></i></a></li>
+        </ul>
+        </nav>
+      </header>
+
+      <!-- {% for producto in productos %}
+      <div class="card" id="producto['id']">
+        <h3>{{ producto.nombre }}</h3>
+        <img src="{{ url_for('static', filename='assets/img/buzos/' ~ producto['imagen']) }}" alt="">
+      </div>
+      {% endfor %} -->
+
+      <h3>CARRITO DE COMPRAS</h3> 
+      <div class="card-container">  
+        <ul>
+          {% for producto in carrito %}
+          <div class="card">
+            <li>Producto ID: {{ producto.id }}</li>
+            <h3>{{ producto.nombre }}</h3>
+            <img src="{{ url_for('static', filename='assets/img/' ~ producto.imagen) }}" alt="{{ producto.nombre }}">
+            <p>Precio: {{ producto.precio }}</p>
+          </div>
+          {% endfor %}
+      </ul>
+</body>
+</html>
