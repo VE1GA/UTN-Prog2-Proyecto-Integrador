@@ -1,3 +1,0 @@
-let datosCarrito = []
-
-document.getElementById()
